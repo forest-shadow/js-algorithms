@@ -8,7 +8,7 @@ Frequency counter stands from utilization of object like collection of character
 ## 01. String character counter
 Write function that will be retrieve string as parameter and will return object with properties referred to the string's characters and value of these properties will be counter of how much it appears in passed string.
 
-```
+```js
 charCount("aaaa")     // {a:4}
 charCount("hello")    // {h:1, e:1, l:2, o:1}
 ```
@@ -16,7 +16,7 @@ charCount("hello")    // {h:1, e:1, l:2, o:1}
 ## 02. The `same` squared
 Write a function called `same`, which accepts two arrays. The function should return `true` if every value in the array has it's corresponding value squared in the second array. The frequency of values must be the same. Order is have no sense here.
 
-```
+```js
 same([1,2,3], [4,1,9])    // true
 same([1,2,3], [1,9])      // false
 same([1,2,1], [4,4,1])    // false
@@ -25,7 +25,7 @@ same([1,2,1], [4,4,1])    // false
 ## 03. Anagrams
 Given two stings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phase, or name formed by rearranging the letters of another, such as `cinema`, formed from `iceman`.
 
-```
+```js
 validAnagram('', '')                  // true
 validAnagram('aaz', 'zza')            // false
 validAnagram('anagram', 'nagaram')    // true
