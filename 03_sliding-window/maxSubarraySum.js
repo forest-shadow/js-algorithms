@@ -35,15 +35,15 @@ export default function maxSubarraySum(arr, num) {
   let tempSum = 0
 
   if (arr.length < num) return null
-  // calculate sum of first `n` elements — to compare with next set of `n` elements sum
+  // calculate sum of first `n` elements — initialize sliding window
   for (let i = 0; i < num; i++) {
     maxSum += arr[i]
   }
 
   tempSum = maxSum
-  // go through the rest of array's elements
+  // go through the rest of array's elements moving sliding window element by element to the array's end
   for (let i = num; i < arr.length; i++) {
-    // delete from `tempSum` first element from previous consecutive set
+    // delete from `tempSum` first element from previous sliding window position
     tempSum = tempSum - arr[i - num] + arr[i]
     maxSum = Math.max(maxSum, tempSum)
   }
