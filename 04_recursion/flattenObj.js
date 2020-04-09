@@ -1,4 +1,4 @@
-// `flatten`
+// `flattenObj`
 // write function which will be flatten given array
 
 const flattenObj = (obj, keys = []) => {
