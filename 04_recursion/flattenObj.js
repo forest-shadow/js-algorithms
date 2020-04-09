@@ -1,11 +1,11 @@
 // `flatten`
 // write function which will be flatten given array
 
-const flatten = (obj, keys = []) => {
+const flattenObj = (obj, keys = []) => {
   let result = {};
   for (let key in obj) {
     if (typeof obj[key] === 'object') {
-      result = { ...result, ...flatten(obj[key], [...keys, key]) };
+      result = { ...result, ...flattenObj(obj[key], [...keys, key]) };
     } else {
       result = { ...result, [[...keys, key].join(':')]: obj[key] };
     }
@@ -13,4 +13,4 @@ const flatten = (obj, keys = []) => {
   return result;
 };
 
-export default flatten;
+export default flattenObj;

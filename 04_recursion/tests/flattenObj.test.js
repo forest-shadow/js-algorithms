@@ -1,4 +1,4 @@
-import flatten from '../flattenObj';
+import flattenObj from '../flattenObj';
 import { isEqual } from 'lodash';
 
 describe(`flatten`, () => {
@@ -23,6 +23,6 @@ describe(`flatten`, () => {
       'e:f:g': 4,
       'e:f:h': 5
     };
-    expect(isEqual(flatten(obj), flattenedObj)).toBeTruthy();
+    expect(isEqual(flattenObj(obj), flattenedObj)).toBeTruthy();
   });
 });
