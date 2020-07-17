@@ -12,6 +12,6 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "jest": "^23.6.0",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.19"
   }
 }
