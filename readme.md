@@ -1,9 +1,9 @@
 # JS Algorithms collection
 
-Updating list of js algorithms
+Updating list of js algorithms:
 
-01. Frequency Counter
-02. Multiple Pointers
-03. Sliding Window
-04. Recursion
-05. Searching
+- [Frequency Counter](https://github.com/forest-shadow/js-algorithms/tree/master/frequency-counter)
+- [Multiple Pointers](https://github.com/forest-shadow/js-algorithms/tree/master/multiple-pointers)
+- [Recursion](https://github.com/forest-shadow/js-algorithms/tree/master/recursion)
+- [Searching](https://github.com/forest-shadow/js-algorithms/tree/master/searching)
+- [Sliding Window](https://github.com/forest-shadow/js-algorithms/tree/master/sliding-window)
