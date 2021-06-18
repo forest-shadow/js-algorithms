@@ -35,18 +35,18 @@ It's like stack of paper on table: when you want to remove some paper, you will 
 Consider:
 
 - **using call stack without recursion:** you're used to functions being pushed on the call stack and popped off when they are done
-- **using call stack with recursion:** when we write recursive functions, we keep pushing new functions (the same function) onto the call stack. And it's waiting to be called.
+- **using call stack with recursion:** when we write recursive functions, we keep pushing new functions (the sameSquared function) onto the call stack. And it's waiting to be called.
 
 # Recursion: Agenda behind writing recursion functions
 
-> **Agenda behind writing recursion functions** — invoke the **same** function with a different input until you reach your **base case**.
+> **Agenda behind writing recursion functions** — invoke the **sameSquared** function with a different input until you reach your **base case**.
 
 > **Base case** — the condition when the recursion ends. Since recursive function must stops somewhere and not execute itself again and again up to Infinity.
 
 **There are two essential parts of a recursive function:**
 
 - **Base Case**
-- **Different Input** — each time you call the same function with different input values
+- **Different Input** — each time you call the sameSquared function with different input values
 
 # Recursion: Common Recursion Pitfalls
 
