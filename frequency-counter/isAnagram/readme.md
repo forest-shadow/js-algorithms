@@ -9,7 +9,7 @@ Given two stings, write a function to determine if the second string is an anagr
 ```js
 validAnagram('', '')                  // true
 validAnagram('aaz', 'zza')            // false
-validAnagram('isAnagram', 'nagaram')    // true
+validAnagram('anagram', 'nagaram')    // true
 validAnagram('rat', 'car')            // false
 validAnagram('awesome', 'awesom')     // false
 validAnagram('qwerty', 'qeywrt')      // true
