@@ -1,7 +1,7 @@
 # String Character Counter
 
 ### Description
-Write function that will be retrieve string as parameter and will return object with properties referred to the string's characters and value of these properties will be counter of how much it appears in passed string.
+Write function which will be retrieve string as parameter and will return it's counter object.
 
 ### Implementation details
 
