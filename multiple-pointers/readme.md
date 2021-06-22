@@ -5,5 +5,5 @@
 
 ## Challenges
 
-- [Zero summary pair from sorted array]()
--
+- [Count unique values in sorted array](https://github.com/forest-shadow/js-algorithms/tree/master/multiple-pointers/countUniqueValues)
+- [Zero summary pair from sorted array](https://github.com/forest-shadow/js-algorithms/tree/master/multiple-pointers/sumZero)
