@@ -1,4 +1,4 @@
-import sumZero from '../sumZero'
+import sumZero from './sumZero'
 
 describe('sumZero', () => {
   test("should return array of first two elements which sum equals to 0", () => {
