@@ -1,4 +1,4 @@
-import greatestCommonDivisor from '../greatestCommonDivisor';
+import greatestCommonDivisor from './greatestCommonDivisor';
 
 describe('greatestCommonDivisor', () => {
   it('should return greatest common divisor of two numbers', () => {
