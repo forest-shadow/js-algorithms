@@ -6,4 +6,5 @@
 
 ## Challenges
 
-- [Maximum subarray sum](https://github.com/forest-shadow/js-algorithms/tree/master/sliding-window/maxSubarraySum)cd 
+- [House robber](https://github.com/forest-shadow/js-algorithms/tree/main/sliding-window/houseRobber)
+- [Maximum subarray sum](https://github.com/forest-shadow/js-algorithms/tree/master/sliding-window/maxSubarraySum)
