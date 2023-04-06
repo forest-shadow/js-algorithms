@@ -16,3 +16,9 @@ Binary Search function:
     - if the value is too small, move the left pointer up
     - if the value is too large, move the right pointer down
 - if you never find the value, return -1
+
+**Big O of Binary Search:**
+
+Worst and Average Case — `O(log n)` 
+
+Best Case — `O(1)`

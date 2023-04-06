@@ -1,11 +1,5 @@
 # Searching Algorithms
 
-**Big O of Binary Search:**
-
-Worst and Average Case — `O(log n)` 
-
-Best Case — `O(1)`
-
 # Naive String Search
 Here we talking about searching substring in string. 
 
