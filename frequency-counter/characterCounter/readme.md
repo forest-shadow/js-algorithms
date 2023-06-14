@@ -1,7 +1,7 @@
 # String Character Counter
 
 ### Description
-Write function which will be retrieve string as parameter and will return it's counter object.
+Write function which will be retrieve string as parameter and return it's letter counter object.
 
 ### Implementation details
 
