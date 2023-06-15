@@ -1,4 +1,4 @@
-# Getting 2 numeric arrays interseciton
+# Getting 2 numeric arrays intersection
 
 ### Description
 Write function returning array of intersection elements for 2 numeric arrays.
