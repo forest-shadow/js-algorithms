@@ -1,9 +1,12 @@
-export const containsDuplicate = (arr) => {
-  if (!arr || !arr.length) return false;
-  const arrHash = {};
-  for (let el of arr) {
-    if (arrHash[el]) return true;
-    else arrHash[el] = true;
+export const containsDuplicate = (numbers) => {
+  if (!numbers || !numbers.length) return false;
+  const numbersCache = {};
+  for (let number of numbers) {
+    if (numbersCache[number]) {
+      return true;
+    } else {
+      numbersCache[number] = true;
+    }
   }
   return false;
-};
+}
