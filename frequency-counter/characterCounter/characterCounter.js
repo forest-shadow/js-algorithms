@@ -5,12 +5,11 @@
  */
 const charCounter = str => {
   const counter = {};
-  for (let currentChar of str) {
-    const charIndex = currentChar.toLowerCase();
-
-    if(/[a-z0-9]/.test(charIndex)) {
-      if (counter[charIndex]) counter[charIndex]++;
-        else counter[charIndex] = 1;
+  for (let char of str) {
+    const currentChar = char.toLowerCase();
+    if(/[a-z]/.test(currentChar)) {
+      if (counter[currentChar]) counter[currentChar]++;
+        else counter[currentChar] = 1;
     }
   }
   return counter;
