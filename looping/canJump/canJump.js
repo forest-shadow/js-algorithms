@@ -1,10 +1,14 @@
-export const canJump = (arr) => {
-  if(!arr || !arr.length) return false;
+/**
+ * canJump - should return true if last element is reachable
+ * @param {number[]} numbers 
+ * @returns {boolean}
+ */
+export const canJump = (numbers) => {
+  if(!numbers || !numbers.length) return false;
 
-  let reachableIndex = arr.length - 1;
-
-  for(let i = reachableIndex - 1; i >=0; i--) {
-    if(i + arr[i] >= reachableIndex) reachableIndex = i;
+  let lastReachableIndex = numbers.length - 1;
+  for(let i = lastReachableIndex - 1; i >= 0; i--) {
+    if(i + numbers[i] >= lastReachableIndex) lastReachableIndex = i;
   }
-  return reachableIndex === 0;
+  return lastReachableIndex === 0;
 }

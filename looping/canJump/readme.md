@@ -6,6 +6,8 @@ Write a function that given array of non-negative integers will return true if i
 ### Implementation details
 
 - element's value describing longevity of the next jump
+- assume that the very last array's element is reachable
+- iterate from the end of the array
 
 ```js
 canJump([])                // false
