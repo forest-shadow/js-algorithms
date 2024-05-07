@@ -9,5 +9,5 @@ Return the letter that was added to `t`.
 
 ```js
 twoStringsDifference('abcd', 'abcde')  // 'e'
-twoStringsDifference('', 'y')          // false
+twoStringsDifference('', 'y')          // y
 ```

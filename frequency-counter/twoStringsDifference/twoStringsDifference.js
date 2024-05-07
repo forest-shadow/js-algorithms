@@ -5,20 +5,19 @@
  * @returns {string}
  */
 export const twoStringsDifference = (str1, str2) => {
-  const frequencyCounter = new Map();
-  
-  for (const char of str1) {
-    frequencyCounter.set(char, (frequencyCounter.get(char) || 0) + 1);
+  const charFrequencyMap = new Map();
+  for(let char of str1) {
+    charFrequencyMap.set(
+      char,
+      (charFrequencyMap.get(char) || 0) + 1
+    )
   }
-  for (const char of str2) {
-    frequencyCounter.set(
-        char,
-        frequencyCounter.get(char) ? frequencyCounter.get(char) - 1 :  1
-    );
-    if(frequencyCounter.get(char) === 0) {
-      frequencyCounter.delete(char);
-    }
+  for(let char of str2) {
+    charFrequencyMap.set(
+      char,
+      charFrequencyMap.get(char) ? charFrequencyMap.get(char) - 1 || 0 : 1
+    )
+    if(charFrequencyMap.get(char) === 0) charFrequencyMap.delete(char)
   }
-  
-  return Array.from(frequencyCounter.keys())[0];
+  return Array.from(charFrequencyMap.keys())[0];
 }
