@@ -1,4 +1,4 @@
-import charCounter from './characterCounter';
+import { charCounter } from './characterCounter';
 
 describe('characterCounter', () => {
   it('should return character counter obj', () => {

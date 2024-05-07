@@ -3,7 +3,7 @@
  * @param str
  * @returns {{}} - string's counter object
  */
-const charCounter = str => {
+export const charCounter = str => {
   const counter = {};
   for (let char of str) {
     const currentChar = char.toLowerCase();
@@ -14,5 +14,3 @@ const charCounter = str => {
   }
   return counter;
 }
-
-export default charCounter;
