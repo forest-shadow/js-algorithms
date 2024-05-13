@@ -1,12 +1,20 @@
+/**
+ * getTargetSumIndexes - get indexes those sum will be equal to target sum
+ * @param {number[]} numbers 
+ * @param {number} sum 
+ * @returns {number[]}
+ */
 export const getTargetSumIndexes = (numbers, sum) => {
-  const numbersDiffHash = {};
-  for(let i = 0; i < numbers.length; i++) {
-    const currentNum = numbers[i];
-    const currentNumDiff = sum - currentNum;
-    if(numbersDiffHash[currentNum] >= 0) {
-      return [numbersDiffHash[currentNum], i]
+  const numbersDiffMap = {};
+  const result = [];
+  for (let i = 0; i < numbers.length; i++) {
+    const currentEl = numbers[i];
+    const currentDiff = sum - currentEl;
+    if (numbersDiffMap[currentEl] >= 0) {
+      result.push(numbersDiffMap[currentEl], i)
     } else {
-      numbersDiffHash[currentNumDiff] = i;
+      numbersDiffMap[currentDiff] = i;
     }
   }
+  return result;
 }
