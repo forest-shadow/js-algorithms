@@ -1,4 +1,4 @@
-import sumRange from '../sumRange';
+import { sumRange } from './sumRange';
 
 describe('sumRange', () => {
   it('should return sum from 1 to `num`', () => {
