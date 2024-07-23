@@ -1,4 +1,4 @@
-import arrSum from './arrSum';
+import { arrSum } from './arrSum';
 
 describe('arrSum', () => {
   it('should return zero if provided array was empty', () => {
