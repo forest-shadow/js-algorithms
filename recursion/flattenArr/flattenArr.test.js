@@ -1,4 +1,4 @@
-import flattenArr from './flattenArr';
+import { flattenArr } from './flattenArr';
 
 describe('flattenArr', () => {
   it('should flatten given array', () => {
