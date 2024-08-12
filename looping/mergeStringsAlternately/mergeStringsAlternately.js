@@ -12,12 +12,3 @@ export const mergeStringsAlternately = (word1, word2) => {
   }
   return result;
 };
-
-const mergeAlternatelyNaive = (word1, word2) => {
-  const result = word1.split('').reduce((acc, char, i) => {
-      if (word1[i]) acc = acc.concat(word1[i])
-      if (word2[i]) acc = acc.concat(word2[i])
-      return acc
-  }, '')
-  return word1.length > word2.length ? result : result.concat(word2.substring(word1.length));
-};
