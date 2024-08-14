@@ -1,4 +1,4 @@
-import { containsDuplicate } from './containsDuplicate';
+import containsDuplicate from './containsDuplicate';
 
 describe('containsDuplicate', () => {
   it('should return false if empty or no array was provided', () => {

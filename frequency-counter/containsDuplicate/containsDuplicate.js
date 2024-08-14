@@ -1,12 +1,18 @@
-export const containsDuplicate = (numbers) => {
-  if (!numbers || !numbers.length) return false;
-  const numbersCache = {};
-  for (let number of numbers) {
-    if (numbersCache[number]) {
-      return true;
-    } else {
-      numbersCache[number] = true;
-    }
+/**
+ * Checks if provided number array contains duplicate elements
+ * @param {number[]} nums 
+ * @returns {boolean}
+ */
+const containsDuplicate = nums => {
+  if (!nums || !nums.length) return false;
+  const lookup = {};
+
+  for(let num of nums) {
+    if (lookup[num]) return true;
+      else lookup[num] = true;
   }
+  
   return false;
 }
+
+export default containsDuplicate;
