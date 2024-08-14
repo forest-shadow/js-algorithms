@@ -3,14 +3,23 @@
  * @param str
  * @returns {{}} - string's counter object
  */
-export const charCounter = str => {
+const charCounter = str => {
   const counter = {};
-  for (let char of str) {
+
+  for(let char of str) {
     const currentChar = char.toLowerCase();
-    if(/[a-z]/.test(currentChar)) {
-      if (counter[currentChar]) counter[currentChar]++;
-        else counter[currentChar] = 1;
+    const charCode = currentChar.charCodeAt(0);
+    // lowercase letters ACSII codes check
+    if (charCode >= 97 && charCode <= 122) {
+    // or
+    // slower, but straightforward check
+    // if(RegExp(/[a-z]/).test(currentChar)) {
+      if(counter[currentChar]) counter[currentChar]++;
+      else counter[currentChar] = 1;
     }
   }
+
   return counter;
 }
+
+export default charCounter;
