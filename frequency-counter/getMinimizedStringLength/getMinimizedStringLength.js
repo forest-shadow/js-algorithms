@@ -4,13 +4,18 @@
  * @return {number}
  */
 // one-liner Set implementation
-export const getMinimizedStringLength = (str) => new Set(str).size;
+const getMinimizedStringLength = (str) => new Set(str).size;
 
 // for loop implementation - if only the most closest characters are removed
-// export const getMinimizedStringLength = (str) => {
-//   let result = str;
-//   for(let i = 1; i < str.length; i++) {
-//       if(str[i] === str[i - 1]) result = result.substring(1);
+// const getMinimizedStringLength = str => {
+//   if(!str || !str.length) return 0;
+
+//   let resultLength = 1;
+//   for (let i = 1; i < str.length; i++) {
+//     if (str[i - 1] !== str[i]) resultLength++;
 //   }
-//   return result.length;
-// };
+
+//   return resultLength;
+// }
+
+export default getMinimizedStringLength;

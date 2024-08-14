@@ -1,4 +1,4 @@
-import { getMinimizedStringLength } from './getMinimizedStringLength';
+import getMinimizedStringLength from './getMinimizedStringLength';
 
 describe('Name of the group', () => {
   it('should return minimized string length', () => {
