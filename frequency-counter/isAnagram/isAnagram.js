@@ -1,7 +1,7 @@
 /**
  * `isAnagram` checks if passed-in strings are anagram of each other
- * @param str1
- * @param str2
+ * @param {string} str1
+ * @param {string} str2
  * @returns {boolean}
  */
 const isAnagram = (str1, str2) => {
