@@ -1,4 +1,4 @@
-import { createCounterFunction } from "./createCounterFunction";
+import createCounterFunction from "./createCounterFunction";
 
 describe('createCounterFunction', () => {
   it('should create `couter` function', () => {

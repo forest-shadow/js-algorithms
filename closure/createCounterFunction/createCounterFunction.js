@@ -3,9 +3,9 @@
  * @param {number} init
  * @return {Function} counter
  */
-export const createCounterFunction = (init) => {
+const createCounterFunction = init => {
   let counter = init;
-  return function() {
-      return counter++;
-  };
-};
+  return () => counter++;
+}
+
+export default createCounterFunction;
