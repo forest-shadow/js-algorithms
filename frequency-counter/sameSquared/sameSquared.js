@@ -1,41 +1,33 @@
 /**
- * `sameSquared` checks if passed-in second array have the same squared elements as first passed one.
- * @param arr1
- * @param arr2
+ * `sameSquared` checks if passed-in second array consists of the same elements as first one, raised to the second power.
+ * @param {number[]} nums1
+ * @param {number[]} nums2
  * @returns {boolean}
  */
-const sameSquared = (arr1, arr2) => {
-  if (arr1.length !== arr2.length) return false;
+const sameSquared = (nums1, nums2) => {
+  if (nums1.length !== nums2.length) return false;
+  const nums1Lookup = {};
+  const nums2Lookup = {};
 
-  const arr1Counter = {};
-  const arr2Counter = {};
-
-  for (let element of arr1) {
-    if(arr1Counter[element]) {
-      arr1Counter[element]++;
-    } else {
-      arr1Counter[element] = 1;
-    }
+  for(let num of nums1) {
+    nums1Lookup[num] = (nums1Lookup[num] || 0) + 1;
 
     // or
-    // arr1Counter[element] = (arr1Counter[element] || 0) + 1
+    // if(nums1Lookup[num]) {
+    //   nums1Lookup[num]++;
+    // } else {
+    //   nums1Lookup[num] = 1;
+    // }
+  }
+  for(let num of nums2) {
+    nums2Lookup[num] = (nums2Lookup[num] || 0) + 1;
   }
 
-  for (let element of arr2) {
-    if(arr2Counter[element]) {
-      arr2Counter[element]++;
-    } else {
-      arr2Counter[element] = 1;
-    }
-  }
-
-  for (let key in arr1Counter) {
+  for(let key in nums1Lookup) {
     if(
-      !arr2Counter[key ** 2] ||
-        arr2Counter[key ** 2] !== arr1Counter[key]
-    ) {
-      return false;
-    }
+      !nums2Lookup[Number(key) ** 2] ||
+      nums2Lookup[Number(key) ** 2] !== nums1Lookup[key]
+    ) return false;
   }
 
   return true;
