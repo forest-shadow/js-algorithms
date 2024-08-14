@@ -1,4 +1,4 @@
-import { getTargetSumIndexes } from "./getTargetSumIndexes"
+import getTargetSumIndexes from "./getTargetSumIndexes"
 
 describe('getTargetSumIndexes', () => {
   it('should return indexes of integer array elements which add up to target sum value', () => {
