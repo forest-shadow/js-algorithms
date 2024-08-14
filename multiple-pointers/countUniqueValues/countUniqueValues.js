@@ -1,14 +1,26 @@
-const countUniqueValues = (arr) => {
-  if (arr.length === 0) return 0;
-  let i = 0;
+/**
+ * Returns count of unique numbers in sorted number array
+ * @param {number[]} nums 
+ * @returns {number}
+ */
+const countUniqueValues = nums => {
+  if (nums.length === 0) return 0;
+  let low = 0;
+  let high = low + 1;
 
-  for(let j = 1; j < arr.length; j++) {
-    if(arr[i] !== arr[j]) {
-      i++;
-      arr[i] = arr[j];
+  while(high < nums.length) {
+    if(nums[low] !== nums[high]) {
+      low++;
+      nums[low] = nums[high];
+
+      // or
+      // nums[low + 1] = nums[high];
+      // low++;
     }
+    high++;
   }
-  return i + 1
+
+  return low + 1
 }
 
 export default countUniqueValues;
