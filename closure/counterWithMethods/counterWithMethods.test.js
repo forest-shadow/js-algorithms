@@ -1,4 +1,4 @@
-import { createCounterWithMethods } from './counterWithMethods';
+import createCounterWithMethods from './counterWithMethods';
 
 describe('createCounterWithMehtods', () => {
   it('should create counter with useful methods', () => {

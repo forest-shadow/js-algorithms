@@ -3,7 +3,7 @@
  * @param {number} init
  * @return { { increment: Function, decrement: Function, reset: Function} }
  */
-export const createCounterWithMethods = init => {
+const createCounterWithMethods = init => {
   let counter = init || 0;
   return {
     increment: () => ++counter,
@@ -11,3 +11,5 @@ export const createCounterWithMethods = init => {
     reset: () => counter = init
   }
 }
+
+export default createCounterWithMethods;
