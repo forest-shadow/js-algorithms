@@ -1,4 +1,4 @@
-import {intersectionArray} from './intersectionArray';
+import intersectionArray from './intersectionArray';
 
 describe('intersectionArray', () => {
   it('should return null if at leash one empty number array will be provided', () => {
