@@ -4,20 +4,16 @@
  * @param {string} str2 
  * @returns {string}
  */
-export const twoStringsDifference = (str1, str2) => {
-  const charFrequencyMap = new Map();
+const twoStringsDifference = (str1, str2) => {
+  const str1Lookup = new Map();
   for(let char of str1) {
-    charFrequencyMap.set(
-      char,
-      (charFrequencyMap.get(char) || 0) + 1
-    )
+    str1Lookup.set(char, (str1Lookup.get(char) || 0) + 1);
   }
   for(let char of str2) {
-    charFrequencyMap.set(
-      char,
-      charFrequencyMap.get(char) ? charFrequencyMap.get(char) - 1 || 0 : 1
-    )
-    if(charFrequencyMap.get(char) === 0) charFrequencyMap.delete(char)
+    str1Lookup.set(char, str1Lookup.get(char) - 1);
+    if (str1Lookup.get(char) === 0) str1Lookup.delete(char);
   }
-  return Array.from(charFrequencyMap.keys())[0];
+  return Array.from(str1Lookup.keys())[0]
 }
+
+export default twoStringsDifference;

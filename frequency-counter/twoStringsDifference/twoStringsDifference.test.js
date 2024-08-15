@@ -1,4 +1,4 @@
-import { twoStringsDifference } from './twoStringsDifference';
+import twoStringsDifference from './twoStringsDifference';
 
 describe('twoStringsDifference', () => {
   it('should return difference letter between two stings', () => {
