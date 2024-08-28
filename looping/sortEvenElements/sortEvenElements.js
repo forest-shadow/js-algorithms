@@ -5,18 +5,11 @@
  * @return {number[]}
  */
 const sortEvenElements = nums => {
-  const evenElements = [];
-
-  for(let num of nums) {
-    if (num % 2 === 0) evenElements.push(num);
-  }
-
-  evenElements.sort((a, b) => a - b);
-
+  const evenNumbers = nums.filter(num => !(num % 2)).sort((a, b) => a - b);
   return nums.map(num => {
-    if (num % 2 === 0) return evenElements.shift();
-    return num;
-  })
+    if (num % 2) return num;
+      else return evenNumbers.shift();
+  });
 }
 
 export default sortEvenElements;
