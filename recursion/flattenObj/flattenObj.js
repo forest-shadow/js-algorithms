@@ -1,6 +1,9 @@
-// `flattenObj`
-// write function capable to make given object flat
-
+/**
+ * Function should flatten given object
+ * @param {Record<string,any>} obj 
+ * @param {string[]} keys 
+ * @returns {Record<string,any>}
+ */
 const flattenObj = (obj, keys = []) => {
   let result = {};
   for (let key in obj) {
