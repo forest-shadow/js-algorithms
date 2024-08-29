@@ -1,42 +1,30 @@
-// naive solution here based on squared loop
-// Time Complexity - O(N^2)
-function maxSubarraySumNaive (arr, num) {
-  if (num > arr.length) {
-    return null
-  }
-  let max = -Infinity
-  let temp
-  for (let i = 0; i < arr.length - num + 1; i++) {
-    temp = 0
-    for (let j = 0; j < num; j++) {
-      temp += arr[i + j]
-    }
-    if (temp > max) {
-      max = temp
-    }
+/**
+ * Return max sum of the `n` consecutive elements from the array
+ * @param {number[]} nums 
+ * @param {number} n 
+ * @returns {number|null}
+ */
+const maxSubarraySum = (nums, n) => {
+  if (nums.length < n) return null;
+
+  let maxSum = 0;
+  let nextSum = 0;
+
+  // find sum of the initial window
+  for (let i = 0; i < n; i++) {
+    maxSum += nums[i];
   }
 
-  return max
+  nextSum = maxSum;
+
+  // move window by 1 element on each iteration
+  for (let i = n; i < nums.length; i++) {
+    // calculate sum of the next window elements
+    nextSum = nextSum - nums[i - n] + nums[i];
+    maxSum = Math.max(maxSum, nextSum);
+  }
+
+  return maxSum;
 }
 
-// Here comes actual sliding window approach
-// Time Complexity - O(N)
-export default function maxSubarraySum(arr, num) {
-  let maxSum = 0
-  let tempSum = 0
-
-  if (arr.length < num) return null
-  // calculate sum of first `n` elements — initialize sliding window
-  for (let i = 0; i < num; i++) {
-    maxSum += arr[i]
-  }
-
-  tempSum = maxSum
-  // go through the rest of array's elements moving sliding window element by element to the array's end
-  for (let i = num; i < arr.length; i++) {
-    // delete from `tempSum` first element from previous sliding window position
-    tempSum = tempSum - arr[i - num] + arr[i]
-    maxSum = Math.max(maxSum, tempSum)
-  }
-  return maxSum
-}
+export default maxSubarraySum;
