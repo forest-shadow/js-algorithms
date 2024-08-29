@@ -1,4 +1,4 @@
-import { isDeeplyEqual } from './isDeeplyEqual';
+import isDeeplyEqual from './isDeeplyEqual';
 
 describe('isObjectEquals', () => {
   const obj1 = { a: 1, b: '2', c: 'test' }

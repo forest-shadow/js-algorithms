@@ -3,7 +3,7 @@
  * @param {any} val2
  * @return {boolean}
  */
-export const isDeeplyEqual = (val1, val2) => {
+const isDeeplyEqual = (val1, val2) => {
   const stack = [{ val1, val2 }];
 
   while (stack.length > 0) {
@@ -21,3 +21,5 @@ export const isDeeplyEqual = (val1, val2) => {
 
   return true;
 };
+
+export default isDeeplyEqual;
