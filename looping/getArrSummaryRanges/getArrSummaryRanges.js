@@ -1,14 +1,20 @@
 /**
  * getArrSummaryRanges
- * @param {number[]} nums 
+ * @param {number[]} nums
+ * @return {string[]}
  */
-export const getArrSummaryRanges = nums => {
+const getArrSummaryRanges = nums => {
+  let startRangeEl = nums[0];
   let result = [];
-  for(let i = 0, startEl = nums[0]; i < nums.length; i++) {
-    if(nums[i] + 1 !== nums[i + 1]) {
-      result.push(startEl === nums[i] ? `${startEl}` : `${startEl}->${nums[i]}`);
-      startEl = nums[i + 1];
+  for (let i = 0; i < nums.length; i++) {
+    const curEl = nums[i];
+    const nextEl = nums[i + 1];
+    if (curEl + 1 !== nextEl) {
+      result.push(curEl === startRangeEl ? '' + curEl : `${startRangeEl}->${curEl}`);
+      startRangeEl = nextEl;
     }
   }
   return result;
 }
+
+export default getArrSummaryRanges;

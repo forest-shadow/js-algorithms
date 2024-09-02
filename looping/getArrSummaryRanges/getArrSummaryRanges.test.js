@@ -1,4 +1,4 @@
-import { getArrSummaryRanges } from './getArrSummaryRanges';
+import getArrSummaryRanges from './getArrSummaryRanges';
 
 describe('getArrSummaryRanges', () => {
   it('should return ranges summary in the provided array', () => {
