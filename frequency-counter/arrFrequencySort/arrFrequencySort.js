@@ -4,12 +4,13 @@
  * @return {number[]}
  */
 const arrFrequencySort = nums => {
-  const lookup = {};
+  const freqMap = {};
+
   for(let num of nums) {
-    if (lookup[num]) lookup[num]++;
-      else lookup[num] = 1;
+    freqMap[num] = (freqMap[num] || 0) + 1;
   }
-  return nums.sort((a, b) => (lookup[a] - lookup[b]) || (b - a))
+
+  return nums.sort((a, b) => (freqMap[a] - freqMap[b]) || (b - a));
 }
 
 export default arrFrequencySort;
