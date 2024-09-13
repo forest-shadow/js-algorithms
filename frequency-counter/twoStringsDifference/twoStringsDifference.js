@@ -5,15 +5,16 @@
  * @returns {string}
  */
 const twoStringsDifference = (str1, str2) => {
-  const str1Lookup = new Map();
+  const charMap = new Map()
   for(let char of str1) {
-    str1Lookup.set(char, (str1Lookup.get(char) || 0) + 1);
+    charMap.set(char, (charMap.get(char) || 0) + 1)
   }
+  console.log(charMap)
   for(let char of str2) {
-    str1Lookup.set(char, str1Lookup.get(char) - 1);
-    if (str1Lookup.get(char) === 0) str1Lookup.delete(char);
+    charMap.set(char, charMap.get(char) ? charMap.get(char) - 1 : 1)
+    if(charMap.get(char) === 0) charMap.delete(char);
   }
-  return Array.from(str1Lookup.keys())[0]
+  return Array.from(charMap.keys())[0]
 }
 
 export default twoStringsDifference;
