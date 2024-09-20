@@ -1,11 +1,12 @@
 /**
  * Return ranges of the sorted number with parametrized range length
  * @param {number[]} nums 
- * @param {number} rangeLength 
+ * @param {number} rangeLength
+ * @return {string}
  */
 const getArrConfigurableRanges = (nums, rangeLength = 3) => {
   const result = [];
-  let startEl = nums[0];
+  let startRangeEl = nums[0];
   // will hold temp els & current range length
   let tempRange = [];
   
@@ -17,11 +18,11 @@ const getArrConfigurableRanges = (nums, rangeLength = 3) => {
     // the case to put something in result -> when curEl + 1 !== nextEl
     if (curEl + 1 !== nextEl) {
       if (tempRange.length >= rangeLength) {
-        result.push(`${startEl}->${curEl}`);
+        result.push(`${startRangeEl}->${curEl}`);
       } else {
         result.push(...tempRange)
       }
-      startEl = nextEl;
+      startRangeEl = nextEl;
       tempRange = []
     }
   }
