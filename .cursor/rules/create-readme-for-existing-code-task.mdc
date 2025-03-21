@@ -1,0 +1,59 @@
+---
+description: create readme description and test cases for existing code snippet
+globs: *.js
+---
+* create `readme.md` description about coding task mentioned as a file, including task description, several desired cases with expected results, also give a list of concepts covered in the task with corresponding comments including practical reasoning about them.
+
+readme.md example:
+```markdown:README.md
+# String Character Counter
+
+## Description
+Write function which will be retrieve string as parameter and return it's letter counter object.
+
+## Implementation details
+
+- counter should be case agnostic
+- all characters except latin letters and numbers should not be counted (be avoided)
+
+```js
+charCount("aaaa")          // {a:4}
+charCount("a^(b4c#@d")     // {a:1, b:1, 4:1, c:1, d:1}
+charCount("AaBa%^bCBdE5)") // {a:3, b:3, c: 1, d: 1, e: 1, 5:1}
+charCount("hello")         // {h:1, e:1, l:2, o:1}
+```
+
+## Concepts Covered
+
+- **Case Insensitivity**: The function uses `toLowerCase()` to handle both uppercase and lowercase letters uniformly.
+- **Character Filtering**: It uses ASCII values to filter out non-alphabetic characters, ensuring only letters are counted.
+- **Object Manipulation**: The function uses an object to store and update the count of each character efficiently.
+
+## Implementation Notes
+
+- The function iterates over each character in the string, converting it to lowercase and checking if it falls within the ASCII range for lowercase letters.
+- If a character is valid, it updates the count in the `counter` object.
+```
+
+Also add snippet related test cases
+```js
+import charCounter from './characterCounter';
+
+describe('charCounter', () => {
+  it('should return character counter object for lowercase letters', () => {
+    expect(charCounter('aaaa')).toEqual({a: 4});
+  });
+
+  it('should ignore non-alphabetic characters', () => {
+    expect(charCounter('a^(b4c#@d')).toEqual({a: 1, b: 1, c: 1, d: 1});
+  });
+
+  it('should be case insensitive', () => {
+    expect(charCounter('AaBa%^bCBdE5)')).toEqual({a: 3, b: 3, c: 1, d: 1, e: 1});
+  });
+
+  it('should handle simple words correctly', () => {
+    expect(charCounter('hello')).toEqual({h: 1, e: 1, l: 2, o: 1});
+  });
+});
+```
